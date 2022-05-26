@@ -225,14 +225,8 @@ function array_to_json() {
 [[ "${jtemps[@]}" =~ [1-9] ]] && jtemp=$(jq -c -n --argjson jtemp "`array_to_json jtemps`" '{$jtemp}') || jtemp="{}"
 
 jq -c -n \
---argjson temp "`array_to_json temps`" \
---argjson fan "`array_to_json fans`" \
 --argjson power "`array_to_json powers`" \
---argjson busids "`array_to_json busids`" \
---argjson brand "`array_to_json brands`" \
---argjson load "$load" \
---argjson jtemp "$jtemp" \
---argjson mtemp "$mtemp" \
+
 '{$temp, $fan, $power, $busids, $brand} + $load + $mtemp + $jtemp'
 
 exit
