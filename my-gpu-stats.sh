@@ -38,12 +38,12 @@ powers=()
 
 function put_stats() { # @index, @temp, @fan, @power, @load, @jtemp, @mtemp
 	[[ -z $1 ]] && return 1
-	[[ ! -z "$2" ]] && temps[$1]="$2"  || temps[$1]=0
-	[[ ! -z "$3" ]] && fans[$1]="$3"   || fans[$1]=0
+	#[[ ! -z "$2" ]] && temps[$1]="$2"  || temps[$1]=0
+	#[[ ! -z "$3" ]] && fans[$1]="$3"   || fans[$1]=0
 	[[ ! -z "$4" ]] && powers[$1]="$4" || powers[$1]=0
-	[[ ! -z "$5" ]] && loads[$1]="$5"  || loads[$1]=0
-	[[ ! -z "$6" ]] && jtemps[$1]="$6" || jtemps[$1]=0
-	[[ ! -z "$7" ]] && mtemps[$1]="$7" || mtemps[$1]=0
+	#[[ ! -z "$5" ]] && loads[$1]="$5"  || loads[$1]=0
+	#[[ ! -z "$6" ]] && jtemps[$1]="$6" || jtemps[$1]=0
+	#[[ ! -z "$7" ]] && mtemps[$1]="$7" || mtemps[$1]=0
 }
 
 
